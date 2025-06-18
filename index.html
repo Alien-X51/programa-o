@@ -3,43 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao iFood</title>
+    <title>Escolha sua comida no iFood</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>iFood</h1>
-            <p>Entrega de comida na sua casa em minutos!</p>
+            <p>Escolha o que você quer comer!</p>
         </header>
 
-        <section class="about">
-            <h2>O que é o iFood?</h2>
-            <p>O iFood é um aplicativo que conecta você a restaurantes próximos, oferecendo uma vasta seleção de pratos para você pedir onde estiver, com entregas rápidas e seguras.</p>
-        </section>
-
-        <section class="features">
-            <h2>Vantagens do iFood</h2>
-            <ul>
-                <li>Entrega rápida e prática</li>
-                <li>Grande variedade de restaurantes</li>
-                <li>Promoções e descontos exclusivos</li>
-                <li>Acompanhamento do pedido em tempo real</li>
-            </ul>
-        </section>
-
-        <section class="gallery">
-            <h2>Comida Deliciosa!</h2>
-            <div class="image-gallery">
-                <img src="https://via.placeholder.com/300x200?text=Pizza" alt="Pizza">
-                <img src="https://via.placeholder.com/300x200?text=Burguer" alt="Hamburguer">
-                <img src="https://via.placeholder.com/300x200?text=Sushi" alt="Sushi">
+        <!-- Seção de seleção de comida -->
+        <section class="menu">
+            <h2>Escolha sua comida</h2>
+            <div class="food-item">
+                <img src="https://via.placeholder.com/150x100?text=Pizza" alt="Pizza">
+                <p>Pizza - R$ 29,90</p>
+                <button class="add-to-cart" data-name="Pizza" data-price="29.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="food-item">
+                <img src="https://via.placeholder.com/150x100?text=Burguer" alt="Hamburguer">
+                <p>Hamburguer - R$ 19,90</p>
+                <button class="add-to-cart" data-name="Hamburguer" data-price="19.90">Adicionar ao Carrinho</button>
+            </div>
+            <div class="food-item">
+                <img src="https://via.placeholder.com/150x100?text=Sushi" alt="Sushi">
+                <p>Sushi - R$ 39,90</p>
+                <button class="add-to-cart" data-name="Sushi" data-price="39.90">Adicionar ao Carrinho</button>
             </div>
         </section>
 
-        <footer>
-            <p>&copy; 2025 iFood. Todos os direitos reservados.</p>
-        </footer>
+        <!-- Seção do Carrinho -->
+        <section class="cart">
+            <h2>Carrinho</h2>
+            <ul id="cart-items">
+                <!-- Itens do carrinho serão exibidos aqui -->
+            </ul>
+            <p id="total">Total: R$ 0,00</p>
+            <button id="proceed-to-payment" class="disabled" disabled>Finalizar Compra</button>
+        </section>
+
+        <!-- Formulário de Pagamento -->
+        <section id="payment" class="hidden">
+            <h2>Pagamento</h2>
+            <form id="payment-form">
+                <label for="card-name">Nome no Cartão:</label>
+                <input type="text" id="card-name" required><br>
+                <label for="card-number">Número do Cartão:</label>
+                <input type="text" id="card-number" required><br>
+                <label for="expiry-date">Data de Validade:</label>
+                <input type="month" id="expiry-date" required><br>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required><br>
+                <button type="submit">Pagar</button>
+            </form>
+        </section>
     </div>
 </body>
 </html>
