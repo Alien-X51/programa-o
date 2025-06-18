@@ -1,3 +1,107 @@
-body{
-     background-color: aqua;
+/* Reset básico de margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    margin: 0;
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    background-color: #EF4135;
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Seções */
+section {
+    margin: 20px 0;
+}
+
+h2 {
+    color: #EF4135;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Lista de vantagens */
+ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    padding-left: 1.2em;
+    position: relative;
+}
+
+ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #EF4135;
+}
+
+/* Galeria de imagens */
+.gallery {
+    text-align: center;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.image-gallery img {
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
 }
